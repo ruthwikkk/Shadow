@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/seekbar_thumb.xml" value="0.38" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3697916666666667" />
       </map>
     </option>

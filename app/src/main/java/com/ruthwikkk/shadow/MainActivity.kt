@@ -3,7 +3,6 @@ package com.ruthwikkk.shadow
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         seekBar.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                Log.e("Seek", "Value : $progress")
                 tv_radius_value.text = "$progress dp"
                 cornerRadius = progress
                 setShadow()
@@ -96,11 +94,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setShadow(){
-        ll_parent.setShadowV2(R.color.bg_like_b2, cornerRadius, shadowRadius, shadowX, shadowY, R.dimen.elevation, ShadowUtils.RoundedEdge.ALL, ShadowUtils.ShadowGravity.ALL)
-    }
-
-
-    fun convertDpToPx(context: Context, dp: Int): Float {
-        return dp * context.resources.displayMetrics.density
+        ll_parent.setShadowV2(R.color.bg_like_b2, cornerRadius, shadowRadius, shadowX, shadowY, R.dimen.elevation, ShadowUtils.RoundedEdge.TOP_LEFT, ShadowUtils.ShadowGravity.ALL)
     }
 }

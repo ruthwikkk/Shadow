@@ -34,10 +34,6 @@ fun View.setShadowV2(
         ContextCompat.getColor(context, shadowColor)
     )
 
-
-
-    Log.e("Elevation", "$elevationValue")
-
    val corners = when (roundEdgeDirection) {
         ShadowUtils.RoundedEdge.TOP_LEFT -> {
             floatArrayOf(
@@ -109,8 +105,6 @@ fun View.setShadowV2(
             drawable.setLayerInset(0, 0, 0, 0, 0)
         }
     }
-
-
     background = drawable
 }
 
